@@ -14,5 +14,5 @@ Spree::Role.class_eval do
     permissions.pluck(:title).include?(permission_title)
   end
 
-  scope :default_role, lambda { where(is_default: true) }
+  #scope :default_role, lambda { where(is_default: true) }
 end
