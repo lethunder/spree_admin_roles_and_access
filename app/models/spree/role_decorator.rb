@@ -1,8 +1,6 @@
   module Spree
     module RoleDecorator
       def self.prepended(base)
-        base.before_validation :strip_whitespaces
-
         base.has_many :roles_permission_sets, dependent: :destroy
         base.has_many :permission_sets, through: :roles_permission_sets
         base.has_many :permissions, through: :permission_sets
